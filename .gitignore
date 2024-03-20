@@ -1,0 +1,5 @@
+*.csv
+*.bin
+*.pkl
+*.json
+.python-version
