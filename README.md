@@ -60,7 +60,7 @@ The project includes the following notebooks:
     1) Takes the user's query as input.
     2) Vectorizes the query.
     3) Searches and retrieves the closest item by finding the closest item vector from the vectorized items using Faiss indices.
-    4) Aggregates user comments for each retrieved item and creates a report using a LLM.
+    4) Aggregates user comments for each retrieved item and creates a report using an LLM.
 
 ## Contributing
 
