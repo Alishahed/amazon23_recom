@@ -48,6 +48,8 @@ To install the project and its dependencies, follow these steps:
 
 Now you have successfully installed the project and its dependencies in your virtual environment. You can proceed to use the project as described in the [Usage](#usage) section.
 
+**Note**: I have implemented and tested this codebase in linux ubuntu. It should work for MacOS too ( I will update the README file if there are additional steps is needed for MacOS)
+
 ## Usage
 
 The project includes the following notebooks:
