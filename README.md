@@ -3,6 +3,7 @@
 # Recommendation System based on Natural Language Queries
 
 This project implements a recommendation system that utilizes natural language queries to recommend products from the [Amazon review dataset](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews). Additionally, the system can generate a report highlighting the pros and cons of the recommended items.
+For this POC I only used only beaty products which is a subset of this dataset.
 
 ## Table of Contents
 
@@ -52,15 +53,27 @@ Now you have successfully installed the project and its dependencies in your vir
 
 ## Usage
 
+### Notebooks
+
 The project includes the following notebooks:
 
 - [Sandbox/exploration](amazon_23_exploration.ipynb): This notebook is used for short experiments and exploring the dataset.
 - [Title vectorization and indexing](title_vectorization.ipynb): This notebook is used to create vectors from item titles and index them. The resulting vectors and indices are saved in `vectorized_texts_v2.pkl` and `faiss_index_v2.bin`, respectively.
+Here is the diagram of this part operation:
+![Vectorization Diagram](assets/vectorization.drawio.png)
+
 - [Item retrieval and recommendation](item_retrieval.ipynb): This is the main notebook that performs the following steps:
     1) Takes the user's query as input.
     2) Vectorizes the query.
     3) Searches and retrieves the closest item by finding the closest item vector from the vectorized items using Faiss indices.
     4) Aggregates user comments for each retrieved item and creates a report using an LLM.
+    ![Query Search Diagram](assets/query_search.drawio.png)
+**Note**: In order to experiment with the above notebooks, you need to download the datasets as well as vector and indeces file and save the in a folder called *data* in the same directory as the notebooks. You can find the location of these file in [Datasets, vectors and indeces](#datasets-vectors-and-indeces) section.
+
+### Datasets, vectors and indeces
+
+The *beaty product* dataset that I extracted from the much larger dataset provided by [Amazon review dataset](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews) can be found in my [google drive](https://drive.google.com/drive/folders/165DPX6E1mP67-9epGzjHZIJQpv7p_mZf?usp=drive_link).
+Also, you can find the vector and FAISS index files my [google drive](https://drive.google.com/drive/folders/1IExhhl-qCIkh5UE4c7NPOxSf73P7ifsP?usp=sharing)
 
 ## Contributing
 
